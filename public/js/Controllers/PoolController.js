@@ -8,12 +8,10 @@ lolpool.controller("PoolController",
             .error(function (error){
                 console.log(error);
             });
-        
-        $scope.animationsEnabled = true;
 
         $scope.add = function(poolRole) {
             var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
+                animation: true,
                 templateUrl: 'public/partials/add-champion-modal.html',
                 controller: 'AddChampionController',
                 size: 'lg',
@@ -23,12 +21,8 @@ lolpool.controller("PoolController",
                     }
                 },
                 keyboard: true,
-                appendTo: $document.find('#add-modal')[0]
+                appendTo: $document.find('add-modal')
             });
-        };
-
-        $scope.toggleAnimation = function () {
-            $scope.animationsEnabled = !$scope.animationsEnabled;
         };
     }
 );
