@@ -2,9 +2,22 @@
     <h3 class="modal-title">Add Champion - {{ role }}</h3>
 </div>
 <div class="modal-body">
-
+    <div class="form-container">
+        <div class="form-group">
+            <label for="championName">Champion</label>
+            <input type="text" class="form-control" id="championName" placeholder="Champion">
+        </div>
+        <div class="form-group">
+            <label for="counters">Counters</label>
+            <input type="text" class="form-control" id="counters" placeholder="Counters">
+        </div>
+        <div class="form-group">
+            <label for="countered-by"> Countered By</label>
+            <input type="text" class="form-control" id="countered-by" placeholder="Countered By">
+        </div>
+    </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
 </div>

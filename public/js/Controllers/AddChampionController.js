@@ -4,7 +4,7 @@ lolpool.controller("AddChampionController", function ($scope, $uibModalInstance,
 
     $scope.role = role;
 
-    $scope.ok = function () {
+    $scope.save = function () {
         $uibModalInstance.close();
     };
 
