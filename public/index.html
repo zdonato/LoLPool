@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lolpool">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="LoLPool, save your champion pool"/>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        <title>LoLPool</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="public/css/main.css">
+    </head>
+
+    <!-- Load JS Scripts -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-touch/angular-touch.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="public/js/app.js"></script>
+    <script src="public/js/Controllers/PoolController.js"></script>
+    <script src="public/js/Controllers/AddChampionController.js"></script>
+    <body>
+        <header>
+            <!-- Login will go here -->
+            <div class="page-header">
+                <h1> LoLPool <small> A place to save your champion pools by role </small></h1>
+            </div>
+        </header>
+
+        <!-- Add Champion Modal -->
+        <div id="add-modal"></div>
+
+        <div ng-controller="PoolController">
+            <div class="panel panel-default" ng-repeat="pool in pools">
+                <div class="panel-heading">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-centered">
+                        <h3 class="panel-title">{{ pool.role }}</h3>
+                    </div>
+                    <div class="col-md-3 add-button">
+                        <button class="btn btn-sm btn-default pull-right" ng-click="add(pool.role)">Add</button>
+                    </div>
+                </div>
+                <div class="panel-body no-padding">
+                    <div class="row text-centered">
+                        <div class="champion col-lg-4">
+                            <h4>Champion</h4>
+                        </div>
+                        <div class="counters col-lg-4">
+                            <h4>Counters</h4>
+                        </div>
+                        <div class="countered-by col-lg-4">
+                            <h4>Countered By</h4>
+                        </div>
+                    </div>
+                    <div class="row text-centered pool-champion" ng-repeat="champion in pool.champions">
+                        <div class="champion col-lg-4">
+                            {{champion.id}}
+                        </div>
+                        <div class="counters col-lg-4">
+                            <span ng-repeat="counter in champion.counters">
+                                {{counter}}<span ng-if="!$last">,</span>
+                            </span>
+                        </div>
+                        <div class="countered-by col-lg-4">
+                            <span ng-repeat="counteredBy in champion.counteredBy">
+                                {{counteredBy}}<span ng-if="!$last">,</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

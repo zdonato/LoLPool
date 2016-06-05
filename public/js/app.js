@@ -1,0 +1,1 @@
+var lolpool = angular.module("lolpool", ['ui.bootstrap']);

@@ -1,0 +1,27 @@
+{
+  "name": "lolpool",
+  "version": "1.0.0",
+  "description": "A website to store a pool of champions that you play per position, along with the ability to list counters and comments about matchups.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdonato/lolpool.git"
+  },
+  "author": "Zachary Donato <zacharyadonato@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdonato/lolpool/issues"
+  },
+  "homepage": "https://github.com/zdonato/lolpool#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-animate": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "angular-touch": "^1.5.6",
+    "angular-ui-bootstrap": "^1.3.3",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jquery": "^2.2.4",
+    "moment": "^2.13.0"
+  }
+}

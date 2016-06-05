@@ -1,0 +1,38 @@
+body {
+    width: 75%;
+    margin: 0 auto;
+}
+
+body > [uib-modal-window]:not([modal-render]) {
+    display: none;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.champion {
+    float: left;
+}
+
+.counters {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.countered-by {
+    float: right;
+}
+
+.no-padding {
+    padding-top: 0px;
+}
+
+.panel-heading {
+    height: 41px;
+}
+
+.add-button {
+    position: relative;
+    top: -5px;
+}

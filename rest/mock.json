@@ -1,0 +1,57 @@
+[
+  {
+    "role": "Top",
+    "champions": [
+      {
+        "id": "Nautilus",
+        "counters": ["Everybody"],
+        "counteredBy": ["Yasuo"]
+      },
+      {
+        "id": "Illinois",
+        "counters": ["Nautilus"],
+        "counteredBy": ["Darius"]
+      }
+    ]
+  },
+  {
+    "role": "Jungle",
+    "champions": [
+      {
+        "id": "Graves",
+        "counters": ["Evelynn"],
+        "counteredBy": ["Kindred"]
+      }
+    ]
+  },
+  {
+    "role": "Mid",
+    "champions": [
+      {
+        "id": "Heimerdinger",
+        "counters": ["Too many to list"],
+        "counteredBy": ["Annie", "Lux"]
+      }
+    ]
+  },
+  {
+    "role": "ADC",
+    "champions": [
+      {
+        "id": "Mordekaiser",
+        "counters": ["Teemo"],
+        "counteredBy": ["Anyone with fucking range"]
+      }
+    ]
+  },
+  {
+    "role": "Support",
+    "champions": [
+      {
+        "id": "Blitzcrank",
+        "counters": ["Santi"],
+        "counteredBy": ["Morgana"]
+      }
+    ]
+  }
+]
