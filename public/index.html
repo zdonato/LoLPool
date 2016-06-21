@@ -21,6 +21,14 @@
     <script src="public/js/app.js"></script>
     <script src="public/js/Controllers/PoolController.js"></script>
     <script src="public/js/Controllers/AddChampionController.js"></script>
+
+    <script type="text/ng-template" id="customTemplate.html">
+        <div ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)">
+            <a>
+                <span ng-bind-html="match.model | uibTypeaheadHighlight:query"></span>
+            </a>
+        </div>
+    </script>
     <body>
         <header>
             <!-- Login will go here -->
