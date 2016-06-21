@@ -2,7 +2,7 @@ var mockData = require('../mock.json');
 
 var express         = require('express');
 var router          = express.Router();
-var timestamp       = require('../utilities/timestamp');
+var timestamp       = require('timestamp-util');
 
 /**
  * @route("/pool/:userID")
@@ -11,7 +11,7 @@ var timestamp       = require('../utilities/timestamp');
  * Handles get requests to get the pool of a user.
  */
 router.get("/:userID", function (request, response) {
-   console.log(timestamp() + "user id: " + request.params.userID);
+   timestamp("user id: " + request.params.userID);
 
    response.send(mockData);
 });

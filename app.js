@@ -2,6 +2,7 @@
 var express         = require('express');
 var path            = require('path');
 var http            = require('http');
+var timestamp       = require('timestamp-util');
 
 var app             = express();
 var port            = normalizePort(process.env.PORT || '9001');
@@ -22,6 +23,8 @@ app.use('/uib', express.static(path.join(__dirname, 'node_modules/angular-ui-boo
 /* Create and start the server. */
 var server          = http.createServer(app);
 server.listen(port);
+
+timestamp("Server is listening on port " + port +  " ...");
 
 /* Normalize port. */
 function normalizePort(val) {
