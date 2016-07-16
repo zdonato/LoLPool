@@ -16,4 +16,16 @@ router.get('/', function (request, response) {
     response.send(championsJSON);
 });
 
+router.get('/type-ahead-list', function (request, response) {
+    timestamp("[GET] /champions/type-ahead-list - Sending list of champion names");
+
+    var championNames = [];
+
+    Object.keys(championsJSON).forEach((champ) => {
+        championNames.push(championsJSON[champ].name);
+    });
+
+    response.send(championNames);
+});
+
 module.exports = router;
