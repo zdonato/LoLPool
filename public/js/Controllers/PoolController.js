@@ -1,6 +1,6 @@
 lolpool.controller("PoolController",
     function ($scope, $http, $uibModal, $document) {
-        $http.get("/pool/1")
+        $http.get("/pool")
             .success(function (response) {
                 console.log(response);
                 $scope.pools = response;

@@ -3,10 +3,15 @@ var express         = require('express');
 var path            = require('path');
 var http            = require('http');
 var timestamp       = require('timestamp-util');
+var cookieParser    = require('cookie-parser');
+var bodyParser      = require('body-parser');
 
 var app             = express();
 var port            = normalizePort(process.env.PORT || '9001');
 app.set('port', port);
+
+app.use(cookieParser());
+app.use(bodyParser.json());
 
 /* Load the routes and tell express about them. */
 var index           = require('./rest/routes/index');
@@ -21,6 +26,11 @@ app.use('/champions', champions);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 app.use('/uib', express.static(path.join(__dirname, 'node_modules/angular-ui-bootstrap')));
+
+// Not found handler.
+app.use((req, res, next) => {
+    res.status(404).sendFile('error.html', { root: 'rest/static' });
+});
 
 /* Create and start the server. */
 var server          = http.createServer(app);

@@ -9,6 +9,7 @@ var router          = express.Router();
  * Handles the / route.
  */
 router.get('/', function (request, response) {
+    response.set('Set-Cookie', 'userId=1');
     response.sendFile('index.html', { root: 'public/'} );
 });
 
