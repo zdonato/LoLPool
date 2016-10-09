@@ -1,0 +1,22 @@
+[
+    {
+        "userId": 1,
+        "pools": [
+            {
+                "role": "Top"
+            },
+            {
+                "role": "Jungle"
+            },
+            {
+                "role": "Mid"
+            },
+            {
+                "role": "ADC"
+            },
+            {
+                "role": "Support"
+            }
+        ]
+    }
+]

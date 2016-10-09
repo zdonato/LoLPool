@@ -19,6 +19,21 @@ lolpool.controller("AddChampionController", function ($scope, $uibModalInstance,
         console.log("counters", $scope.selectedCounters);
         console.log("countered-by", $scope.selectedCounteredBy);
 
+        var saveData = {
+            champion: $scope.selectedChampion,
+            counters: $scope.selectedCounters,
+            counteredBy: $scope.selectedCounteredBy,
+            role: $scope.role
+        };
+
+        $http.post("/pool", saveData)
+            .success(function (response) {
+                console.log(response);
+            })
+            .error(function (err) {
+                console.log(err);
+            });
+
         $uibModalInstance.close();
     };
 

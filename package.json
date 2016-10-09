@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A website to store a pool of champions that you play per position, along with the ability to list counters and comments about matchups.",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zdonato/lolpool.git"
